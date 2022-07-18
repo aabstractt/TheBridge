@@ -2,10 +2,9 @@
 
 namespace Bridge\Database;
 
-use pocketmine\utils\Color;
-use pocketmine\{Player, Server};
-
 use Bridge\Main;
+use pocketmine\{Player, Server};
+use pocketmine\utils\Color;
 
 class Team {
 	

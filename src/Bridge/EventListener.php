@@ -2,27 +2,23 @@
 
 namespace Bridge;
 
-use pocketmine\Player as pocketPlayer;
-use pocketmine\Server;
+use Bridge\Database\Entity\EntityJoin;
 use pocketmine\block\Block;
-use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
-use pocketmine\event\player\PlayerMoveEvent;
-use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
-use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
-use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
-
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
-
-use Bridge\Database\Entity\EntityJoin;
-use Bridge\Database\{Player, Team};
-use Bridge\Main;
+use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
+use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
+use pocketmine\Player as pocketPlayer;
+use pocketmine\Server;
+use pocketmine\utils\TextFormat;
 use pocketmine\utils\TextFormat as T;
 
 class EventListener implements Listener {

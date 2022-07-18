@@ -2,11 +2,11 @@
 
 namespace Bridge\Database;
 
-use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
-use pocketmine\{math\Vector3 as Vector, block\Block, utils\TextFormat, item\Item};
-use pocketmine\{Player as pocketPlayer, Server};
-use Bridge\{Main, Arena\Arena, Database\Team};
+use Bridge\{Main};
 use Bridge\BossAnnounce\API;
+use pocketmine\{block\Block, item\Item, math\Vector3 as Vector, utils\TextFormat};
+use pocketmine\{Server};
+use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 
 class Player {
 	

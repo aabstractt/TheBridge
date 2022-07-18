@@ -2,13 +2,11 @@
 
 namespace Bridge\Task;
 
-use pocketmine\scheduler\Task;
-use pocketmine\item\Item;
-use pocketmine\utils\TextFormat;
-use pocketmine\{Player as pocketPlayer, Server};
-
 use Bridge\Main;
-use Bridge\Database\Player;
+use pocketmine\{Player as pocketPlayer, Server};
+use pocketmine\item\Item;
+use pocketmine\scheduler\Task;
+use pocketmine\utils\TextFormat;
 
 class SearchArena extends Task {
 	

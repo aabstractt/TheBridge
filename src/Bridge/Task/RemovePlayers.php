@@ -2,19 +2,19 @@
 
 namespace Bridge\Task;
 
-use pocketmine\scheduler\Task;
-use pocketmine\utils\TextFormat;
-use Bridge\{Main, Arena\Arena, Database\Player};
-use pocketmine\Player as pocketPlayer;
+use Bridge\{Main};
+use pocketmine\block\Air;
+use pocketmine\block\Block;
+use pocketmine\block\Glass;
 use pocketmine\entity\Entity;
-use pocketmine\tile\Chest;
 use pocketmine\inventory\ChestInventory;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
-use pocketmine\block\Block;
-use pocketmine\block\Air;
-use pocketmine\block\Glass;
 use pocketmine\math\Vector3;
+use pocketmine\Player as pocketPlayer;
+use pocketmine\scheduler\Task;
+use pocketmine\tile\Chest;
+use pocketmine\utils\TextFormat;
 
 class RemovePlayers extends Task {
 	

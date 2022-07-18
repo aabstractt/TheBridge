@@ -2,12 +2,10 @@
 
 namespace Bridge\Task;
 
+use Bridge\Main;
+use pocketmine\{Player as pocketPlayer, Server};
 use pocketmine\scheduler\Task;
 use pocketmine\utils\TextFormat;
-use pocketmine\{Player as pocketPlayer, Server};
-
-use Bridge\Main;
-use Bridge\Database\Player;
 
 class Respawn extends Task {
 	

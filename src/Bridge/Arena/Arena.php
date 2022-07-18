@@ -2,13 +2,11 @@
 
 namespace Bridge\Arena;
 
-use pocketmine\utils\TextFormat;
-use pocketmine\math\Vector3;
-use pocketmine\{Player as pocketPlayer, Server};
-
-use Bridge\Main;
-use Bridge\Database\{Player, Team};
 use Bridge\BossAnnounce\API;
+use Bridge\Main;
+use pocketmine\{Player as pocketPlayer, Server};
+use pocketmine\math\Vector3;
+use pocketmine\utils\TextFormat;
 
 class Arena {
 	

@@ -2,16 +2,13 @@
 
 namespace Bridge\Command;
 
+use Bridge\Main;
+use pocketmine\{Server};
 use pocketmine\command\{CommandSender, PluginCommand};
-use pocketmine\utils\TextFormat;
 use pocketmine\entity\Entity;
 use pocketmine\item\Item;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
-use pocketmine\{Player as pocketPlayer, Server};
-
-use Bridge\Database\Player;
-use Bridge\Arena\Arena;
-use Bridge\Main;
+use pocketmine\utils\TextFormat;
 
 class TBCommand extends PluginCommand {
 	

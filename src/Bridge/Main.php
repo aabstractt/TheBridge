@@ -2,35 +2,39 @@
 
 namespace Bridge;
 
-use pocketmine\tile\Tile;
-use pocketmine\tile\Chest;
-use pocketmine\item\Item;
+use Bridge\{Arena\Arena,
+    Command\TBCommand,
+    Task\EntityTag,
+    Task\Game,
+    Task\RemovePlayers,
+    Task\Respawn,
+    Task\SearchArena};
+use Bridge\Database\{Player, Team};
+use Bridge\Database\Entity\EntityJoin;
+use pocketmine\{Player as pocketPlayer, Server};
 use pocketmine\block\Block;
+use pocketmine\entity\Entity;
+use pocketmine\event\Listener;
+use pocketmine\item\enchantment\{Enchantment, EnchantmentInstance};
+use pocketmine\item\Item;
+use pocketmine\level\Level;
+use pocketmine\level\Position;
+use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\ByteTag;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
 use pocketmine\nbt\tag\FloatTag;
-use pocketmine\nbt\tag\StringTag;
+use pocketmine\nbt\tag\IntTag;
 use pocketmine\nbt\tag\ListTag;
 use pocketmine\nbt\tag\ShortTag;
-use pocketmine\nbt\tag\IntTag;
-use pocketmine\item\enchantment\{Enchantment, EnchantmentInstance};
+use pocketmine\nbt\tag\StringTag;
 use pocketmine\network\mcpe\protocol\{ModalFormRequestPacket, ModalFormResponsePacket};
-use pocketmine\math\Vector3;
-use pocketmine\level\Position;
-use pocketmine\level\Level;
-use pocketmine\utils\TextFormat;
-use pocketmine\utils\Config;
-use pocketmine\event\Listener;
+use pocketmine\network\mcpe\protocol\{AddEntityPacket, LevelEventPacket};
 use pocketmine\plugin\PluginBase;
-use pocketmine\network\mcpe\protocol\{LevelEventPacket, AddEntityPacket};
-use pocketmine\entity\Entity;
-use pocketmine\{Player as pocketPlayer, Server};
-
-use Bridge\Database\Entity\EntityJoin;
-use Bridge\EventListener;
-use Bridge\Database\{Player, Team};
-use Bridge\{Arena\Arena, Command\TBCommand, Task\Rotation, Task\Respawn, Task\EntityTag, Task\RemovePlayers, Task\Game, Task\SearchArena};
+use pocketmine\tile\Chest;
+use pocketmine\tile\Tile;
+use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
 	

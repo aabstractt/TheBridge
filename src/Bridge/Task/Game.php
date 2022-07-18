@@ -2,18 +2,15 @@
 
 namespace Bridge\Task;
 
-use Scoreboards\Scoreboards;
+use Bridge\Main;
+use pocketmine\{Server};
+use pocketmine\block\Block;
+use pocketmine\entity\{Effect, EffectInstance};
+use pocketmine\item\Item;
+use pocketmine\level\{Level, Position};
 use pocketmine\scheduler\Task;
 use pocketmine\utils\TextFormat;
-use pocketmine\entity\{Effect, EffectInstance};
-use pocketmine\level\{Level, Position};
-use pocketmine\item\Item;
-use pocketmine\block\Block;
-use pocketmine\{Server, Player as pocketPlayer};
-
-use Bridge\Database\Player;
-use Bridge\Arena\Arena;
-use Bridge\Main;
+use Scoreboards\Scoreboards;
 
 class Game extends Task {
 	
