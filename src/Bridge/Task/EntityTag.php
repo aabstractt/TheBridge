@@ -1,20 +1,20 @@
 <?php
 namespace Bridge\Task;
 
-use pocketmine\scheduler\Task;
-use Bridge\Main;
 use Bridge\Database\Entity\EntityJoin;
-use pocketmine\plugin\Plugin;
+use Bridge\Main;
 use pocketmine\entity\Entity;
-use pocketmine\item\Item;
-use pocketmine\Player as pocketPlayer;
-use pocketmine\math\Vector2;
-use pocketmine\level\Level;
-use pocketmine\Server;
 use pocketmine\entity\Human;
-use pocketmine\utils\TextFormat;
+use pocketmine\item\Item;
+use pocketmine\level\Level;
+use pocketmine\math\Vector2;
 use pocketmine\network\mcpe\protocol\MovePlayerPacket;
+use pocketmine\Player as pocketPlayer;
+use pocketmine\plugin\Plugin;
+use pocketmine\scheduler\Task;
+use pocketmine\Server;
 use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
 
 class EntityTag extends Task{
 	

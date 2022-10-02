@@ -2,10 +2,8 @@
 
 namespace Bridge\Database\Entity;
 
-use pocketmine\entity\Human;
 use pocketmine\entity\Entity;
-
-use Bridge\Main;
+use pocketmine\entity\Human;
 
 class EntityJoin extends Human {
 	
